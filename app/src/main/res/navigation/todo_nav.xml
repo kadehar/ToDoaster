@@ -8,31 +8,31 @@
     <fragment
         android:id="@+id/listFragment"
         android:name="com.example.todoaster.fragments.list.ListFragment"
-        android:label="fragment_list"
+        android:label="ToDo List"
         tools:layout="@layout/fragment_list" >
         <action
-            android:id="@+id/action_listFragment_to_addFragment"
+            android:id="@+id/action_add_item"
             app:destination="@id/addFragment" />
         <action
-            android:id="@+id/action_listFragment_to_updateFragment"
+            android:id="@+id/action_update_item"
             app:destination="@id/updateFragment" />
     </fragment>
     <fragment
         android:id="@+id/addFragment"
         android:name="com.example.todoaster.fragments.add.AddFragment"
-        android:label="fragment_add"
+        android:label="Add new ToDo"
         tools:layout="@layout/fragment_add" >
         <action
-            android:id="@+id/action_addFragment_to_listFragment"
+            android:id="@+id/action_back_to_list"
             app:destination="@id/listFragment" />
     </fragment>
     <fragment
         android:id="@+id/updateFragment"
         android:name="com.example.todoaster.fragments.update.UpdateFragment"
-        android:label="fragment_update"
+        android:label="Update ToDo"
         tools:layout="@layout/fragment_update" >
         <action
-            android:id="@+id/action_updateFragment_to_listFragment"
+            android:id="@+id/action_back_to_list"
             app:destination="@id/listFragment" />
     </fragment>
 </navigation>
