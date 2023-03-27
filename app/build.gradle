@@ -1,7 +1,7 @@
 apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
-apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-parcelize'
 apply plugin: 'androidx.navigation.safeargs.kotlin'
 
 android {
@@ -25,7 +25,7 @@ android {
         }
     }
     buildFeatures {
-        dataBinding true
+        viewBinding true
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
@@ -69,10 +69,6 @@ dependencies {
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
 
-    //DataBinding
-    kapt "androidx.databinding:compiler:3.2.0-alpha11"
-    kapt "androidx.databinding:databinding-common:7.4.2"
-
     //Animation
-    implementation "jp.wasabeef:recyclerview-animators:3.0.0"
+    implementation "jp.wasabeef:recyclerview-animators:4.0.2"
 }
