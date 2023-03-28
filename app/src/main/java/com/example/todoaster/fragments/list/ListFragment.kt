@@ -26,6 +26,10 @@ class ListFragment : Fragment(R.layout.fragment_list) {
             findNavController().navigate(R.id.action_add_item)
         }
 
+        binding.root.setOnClickListener {
+            findNavController().navigate(R.id.action_update_item)
+        }
+
         binding.noData.visibility = View.VISIBLE
 
         return binding.root
