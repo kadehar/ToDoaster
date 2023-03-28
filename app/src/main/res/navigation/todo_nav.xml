@@ -20,19 +20,19 @@
     <fragment
         android:id="@+id/addFragment"
         android:name="com.example.todoaster.fragments.add.AddFragment"
-        android:label="Add new ToDo"
+        android:label="Add"
         tools:layout="@layout/fragment_add" >
         <action
-            android:id="@+id/action_back_to_list"
+            android:id="@+id/action_back_to_list_from_add"
             app:destination="@id/listFragment" />
     </fragment>
     <fragment
         android:id="@+id/updateFragment"
         android:name="com.example.todoaster.fragments.update.UpdateFragment"
-        android:label="Update ToDo"
+        android:label="Edit"
         tools:layout="@layout/fragment_update" >
         <action
-            android:id="@+id/action_back_to_list"
+            android:id="@+id/action_back_to_list_from_edit"
             app:destination="@id/listFragment" />
     </fragment>
 </navigation>
