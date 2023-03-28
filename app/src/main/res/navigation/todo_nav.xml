@@ -22,11 +22,8 @@
         android:name="com.example.todoaster.fragments.add.AddFragment"
         android:label="Add"
         tools:layout="@layout/fragment_add" >
-        <!--<action
-            android:id="@+id/action_back_to_list_from_add"
-            app:destination="@id/listFragment" />-->
         <action
-            android:id="@+id/action_addFragment_to_listFragment"
+            android:id="@+id/action_back_to_list_from_add"
             app:destination="@id/listFragment" />
     </fragment>
     <fragment
