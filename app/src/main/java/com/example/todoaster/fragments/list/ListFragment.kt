@@ -10,7 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.todoaster.R
 import com.example.todoaster.databinding.FragmentListBinding
 
-class ListFragment : Fragment(R.layout.fragment_list) {
+class ListFragment : Fragment(R.layout.fragment_list), MenuProvider {
 
     private var _binding: FragmentListBinding? = null
     private val binding get() = _binding!!
@@ -34,16 +34,7 @@ class ListFragment : Fragment(R.layout.fragment_list) {
         binding.noData.visibility = View.VISIBLE
 
         val menuHost: MenuHost = requireActivity()
-
-        menuHost.addMenuProvider(object : MenuProvider {
-            override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
-                menuInflater.inflate(R.menu.list_fragment_menu, menu)
-            }
-
-            override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
-                return true
-            }
-        }, viewLifecycleOwner, Lifecycle.State.RESUMED)
+        menuHost.addMenuProvider(this, viewLifecycleOwner, Lifecycle.State.RESUMED)
 
         return binding.root
     }
@@ -51,5 +42,13 @@ class ListFragment : Fragment(R.layout.fragment_list) {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
+        menuInflater.inflate(R.menu.list_fragment_menu, menu)
+    }
+
+    override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
+        return true
     }
 }
