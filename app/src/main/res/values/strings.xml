@@ -5,6 +5,11 @@
     <string name="title">Title</string>
     <string name="description">Description</string>
     <string name="priority">Priority</string>
+    <string name="search">Search</string>
+    <string name="sort_by">Sort by</string>
+    <string name="high_priority">High priority</string>
+    <string name="low_priority">Low priority</string>
+    <string name="delete_all">Delete all</string>
 
     <string-array name="priorities">
         <item>High</item>
