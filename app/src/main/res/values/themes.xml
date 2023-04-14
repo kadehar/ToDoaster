@@ -18,6 +18,6 @@
     </style>
     
     <style name="Toolbar" parent="Widget.AppCompat.ActionBar">
-        <item name="android:textColorPrimary">@color/colorOnPrimaryVariant</item>
+        <item name="android:textColorPrimary">@color/colorOnSecondary</item>
     </style>
 </resources>
