@@ -5,6 +5,7 @@
 
     <style name="AppTheme" parent="BaseTheme.Light">
         <item name="android:statusBarColor">@color/colorPrimary</item>
+        <item name="actionBarTheme">@style/Toolbar</item>
     </style>
     
     <style name="BaseTheme.Light">
@@ -14,5 +15,9 @@
         <item name="colorSecondary">@color/colorSecondary</item>
         <item name="colorSecondaryVariant">@color/colorSecondaryVariant</item>
         <item name="colorOnSecondary">@color/colorOnSecondary</item>
+    </style>
+    
+    <style name="Toolbar" parent="Widget.AppCompat.ActionBar">
+        <item name="android:textColorPrimary">@color/colorOnPrimaryVariant</item>
     </style>
 </resources>

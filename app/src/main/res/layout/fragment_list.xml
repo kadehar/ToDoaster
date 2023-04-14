@@ -27,7 +27,7 @@
         android:clickable="true"
         android:contentDescription="@string/add_btn_desc"
         android:focusable="true"
-        android:src="@drawable/ic_add"
+        android:src="@drawable/ic_pencil"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
