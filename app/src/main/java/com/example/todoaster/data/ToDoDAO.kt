@@ -18,4 +18,16 @@ interface ToDoDAO {
 
     @Delete
     suspend fun delete(toDoData: ToDoData)
+
+    @Query("DELETE FROM ${ToDoData.TABLE_NAME}")
+    suspend fun deleteAll()
+
+    @Query("SELECT * FROM ${ToDoData.TABLE_NAME} WHERE title LIKE :query")
+    fun search(query: String): LiveData<List<ToDoData>>
+
+    @Query("SELECT * FROM ${ToDoData.TABLE_NAME} ORDER BY CASE WHEN priority LIKE 'H%' THEN 1 WHEN priority LIKE 'M%' THEN 2 WHEN priority LIKE 'L%' THEN 3 END")
+    fun sortByHighPriority(): LiveData<List<ToDoData>>
+
+    @Query("SELECT * FROM ${ToDoData.TABLE_NAME} ORDER BY CASE WHEN priority LIKE 'L%' THEN 1 WHEN priority LIKE 'M%' THEN 2 WHEN priority LIKE 'H%' THEN 3 END")
+    fun sortByLowPriority(): LiveData<List<ToDoData>>
 }

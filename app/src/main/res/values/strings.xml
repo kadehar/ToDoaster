@@ -12,6 +12,11 @@
     <string name="delete_all">Delete all</string>
     <string name="save">Save</string>
     <string name="delete">Delete</string>
+    <string name="success_message">Successfully added!</string>
+    <string name="success_upd_message">Successfully updated!</string>
+    <string name="success_delete_message">Successfully removed: %1$s!</string>
+    <string name="success_delete_all_message">Successfully removed all data!</string>
+    <string name="error_msg">Please fill out all fields.</string>
 
     <string-array name="priorities">
         <item>High</item>
