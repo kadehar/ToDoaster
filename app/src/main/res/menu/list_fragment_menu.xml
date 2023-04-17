@@ -4,7 +4,6 @@
     <item
         android:id="@+id/search"
         android:icon="@drawable/ic_search"
-        android:iconTint="@color/colorOnPrimaryVariant"
         android:title="@string/search"
         app:actionViewClass="androidx.appcompat.widget.SearchView"
         app:showAsAction="ifRoom" />
@@ -13,7 +12,6 @@
         <item
             android:id="@+id/sort"
             android:icon="@drawable/ic_filter"
-            android:iconTint="@color/colorOnPrimaryVariant"
             android:title="@string/sort_by"
             app:showAsAction="ifRoom">
             <menu>
@@ -30,8 +28,8 @@
 
     <item
         android:id="@+id/deleteAll"
-        android:icon="@drawable/ic_remove"
-        android:iconTint="@color/colorOnPrimaryVariant"
+        android:icon="@drawable/ic_delete"
+        android:iconTint="@color/white"
         android:title="@string/delete_all"
         app:showAsAction="ifRoom" />
 </menu>

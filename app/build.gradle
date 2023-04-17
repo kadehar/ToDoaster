@@ -5,11 +5,11 @@ apply plugin: 'kotlin-parcelize'
 apply plugin: 'androidx.navigation.safeargs.kotlin'
 
 android {
-    namespace 'com.example.todoaster'
+    namespace 'com.github.kadehar.todoaster'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.example.todoaster"
+        applicationId "com.github.kadehar.todoaster"
         minSdk 26
         targetSdk 33
         versionCode 1
@@ -71,4 +71,15 @@ dependencies {
 
     //Animation
     implementation "jp.wasabeef:recyclerview-animators:4.0.2"
+
+    // AdapterDelegates
+    def adapter_delegate_version = "4.3.0"
+    implementation "com.hannesdorfmann:adapterdelegates4-kotlin-dsl:$adapter_delegate_version"
+    implementation "com.hannesdorfmann:adapterdelegates4-kotlin-dsl-viewbinding:$adapter_delegate_version"
+    // Kirich's viewBinding delegate
+    implementation "com.github.kirich1409:viewbindingpropertydelegate:1.5.1-beta01"
+    // Koin DI
+    implementation "io.insert-koin:koin-android:3.4.0"
+    // Cicerone
+    implementation "com.github.terrakok:cicerone:7.1"
 }
